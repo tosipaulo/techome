@@ -1,0 +1,116 @@
+*, *:before, *:after {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   margin:0;
+   padding: 0;
+   list-style: none;
+}
+ 
+html{
+  background-color: #fff;
+  background-image: url(../img/diagmonds-light.png);
+  font-family: "Raleway", "Open Sans",sans-serif;
+} 
+
+body {
+    font-size: 62.5%;
+    text-align: center;
+}
+header, section, footer, article {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p, a, span, li, sub, sup, small, table, label, input, select, textarea, button, .panel, .notification {
+    font-family: "Open Sans",sans-serif;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+
+.clearfix:before,
+.clearfix:after {
+   content: " ";
+   display: table;
+}
+ 
+.clearfix:after {
+   clear: both;
+}
+ 
+.clearfix {
+   *zoom: 1;
+}
+
+img,
+picture,
+video,
+embed {
+   max-width: 100%;
+}
+
+.font-title {
+  font-size: 3.9em; /*39px*/
+}
+
+.font-subTitle {
+  font-size: 1.8em; /*18px*/
+}
+
+
+.container {
+  width: 100%;
+}
+
+/*********** Header ***********/
+
+.header {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  background: #fff;
+  border-bottom: 3px solid #ccc;
+  --webkit-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.55);
+  -moz-box-shadow:    0px 2px 7px 0px rgba(50, 50, 50, 0.55);
+  box-shadow:         0px 2px 7px 0px rgba(50, 50, 50, 0.55);
+}
+
+.logo {
+  float: left;
+}
+
+.menu {
+  position: absolute;
+  width:100%;
+  background: green;
+}
+
+.menu ul {display:inline;}
+
+.menu ul li {
+  display: inline;
+}
+
+.menu ul li a {
+  display:block;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding:20px;
+  color: #fff;
+  font-size: 1.9em;
+}
+
+.menu ul li a:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.menu li:last-child a {border-bottom: none;}
+
+.nav-toggle {
+  margin:44px;
+  margin-right: 0px;
+  float: right;
+  font-size: 1.9em;
+}
+
+
