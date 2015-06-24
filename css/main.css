@@ -66,6 +66,7 @@ embed {
 /*********** Header ***********/
 
 .header {
+  /*position: fixed;*/
   width: 100%;
   height: 100px;
   padding: 10px;
@@ -83,7 +84,10 @@ embed {
 .menu {
   position: absolute;
   width:100%;
-  background: green;
+  top: 100px;
+  margin-left: -10px;
+  background: #B2CF3F;
+  z-index: 10;
 }
 
 .menu ul {display:inline;}
@@ -114,3 +118,57 @@ embed {
 }
 
 
+@media (min-width: 445px) and (orientation:landscape) {
+
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 800px;
+    margin: 0 auto;
+  } 
+
+  .nav-toggle {
+    display: none;
+} 
+
+  .menu {
+    position: relative;
+    top: 0;
+    width:800px;
+    float: right;
+    background-color: transparent;
+  }
+
+  .menu ul {float: right;}
+
+  .menu ul li a {
+    display:inline-block;
+    margin-top: -22px;
+    padding:40px;
+    font-size: 1.9em;
+    color: #333;
+  }
+
+  .menu ul li a:hover {
+    background-color: rgba(204,204,204,0.1);
+    color: #B2CF3F;
+    border-bottom: 4px solid #B2CF3F;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 980px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1600px) {
+ 
+}
