@@ -18,7 +18,6 @@ body {
     text-align: center;
 }
 header, section, footer, article {
-    overflow: hidden;
     margin: 0;
     padding: 0;
 }
@@ -66,7 +65,7 @@ embed {
 /*********** Header ***********/
 
 .header {
-  /*position: fixed;*/
+  position: fixed;
   width: 100%;
   height: 100px;
   padding: 10px;
@@ -87,7 +86,7 @@ embed {
   top: 100px;
   margin-left: -10px;
   background: #B2CF3F;
-  z-index: 10;
+  z-index: 9999;
 }
 
 .menu ul {display:inline;}
