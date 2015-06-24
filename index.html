@@ -22,10 +22,11 @@
 	<!-- css geral -->
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
+	
 </head>
 <body>
 
-	
+	<!-- Header --> 
 	<header class="header">
 		<div class="container">
 			<img src="img/logo.png" alt="Techome | Assistência Técnica Especializada" class="logo">
@@ -40,22 +41,49 @@
 			</nav>		
 		</div>		
 	</header>
-		<div class="container clearfix">
-		<!--video controls poster="video/thumbnail-video.jpg" class="video">
-			<source src="video/video.mp4" type="video/mp4" >
-			<source src="video/video.webm" type="video/webm">
-			<source src="video/video.flv" type="video/flv" >
-			<source src="video/video.ogg" type="video/ogg" >
-			<source src="video/video.mov" type="video/mov" >
-			Seu navegador não suporta o elemento <code>video</code>
-		</video>
 
-	</div>-->
+	<section class="section clearfix">
+
+		<!-- PageHome -->
+		<article class="pageHome clearfix" id="pageHome">
+			<div class="container">
+				<video poster="video/play.png" class="video" id="video" onclick="playPause()">
+					<source src="video/video.mp4" type="video/mp4" >
+					<source src="video/video.webm" type="video/webm">
+					<source src="video/video.flv" type="video/flv" >
+					<source src="video/video.ogg" type="video/ogg" >
+					<source src="video/video.mov" type="video/mov" >
+					Seu navegador não suporta o elemento <code>video</code>
+				</video>
+				<div class="apresentacao">
+					<h1>Computador lento? travando?</h1>
+					<h1>Nós vamos até você.</h1>
+					<button class="btn btn-green">Entre em contato</button>
+				</div>				
+			</div>
+		</article>
+
+		<article>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, odio, atque. Eos quidem, aliquid expedita temporibus numquam itaque aspernatur modi voluptates nulla, cupiditate sunt eaque deleniti, omnis. Dignissimos, ut blanditiis!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum dolorum aliquid hic at assumenda eius est quidem. Ullam dignissimos ab, in, nemo atque laudantium deserunt rerum, possimus illo ratione aperiam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam in provident aliquid, laboriosam iste dolor. Quisquam enim, eveniet dicta! Nesciunt provident, quasi magni modi, perspiciatis corporis vero recusandae amet velit.
+		</article>
+	</section>
+
 	<!-- jquery -->
 	<script  src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<!-- include Cycle2 -->
 	<script src="js/jquery.cycle2.min.js"></script>
 	<!-- include main -->
 	<script src="js/main.js"></script>
+	<script> 
+		var myVideo = document.getElementById("video"); 
+
+		function playPause() { 
+		    if (myVideo.paused) 
+		        myVideo.play(); 
+		    else 
+		        myVideo.pause(); 
+		} 
+
+</script> 
 </body>
 </html>

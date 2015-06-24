@@ -50,29 +50,45 @@ $(document).ready(function() {
         return false;
       });
 
+
+
   //Menu
   var largura = $(window).width(); // largura do viewport
+  var altura  = $(window).height();
+  var larHeight = altura - 100;
+  var heightLargura = larHeight /2;
+
+
+  $('.video').css('height',heightLargura);
+
+
   var altura  = $(window).height(); // altura do viewport 
   //$('.menu').before("<span class='nav-toggle'>Menu <i class='fa fa-bars'></i></span>");
   //$('.nav-toggle').hide();
   $('.nav-toggle').on('click', function() {
     $('.menu').slideToggle(350);
+    $('.menu').css('display', 'block');
   });
   
-  if (largura < 500){
-    $('.nav-toggle').show();
-    $('.menu').hide();
-  }
+   //$('.nav-toggle').on('click', function() {
+    
+   //$('.menu').slideToggle(350);
+  //});
+
+  //if (largura < 768){
+    //$('.nav-toggle').show();
+    //$('.menu').hide();
+  //}
   
-  $(window).resize(function(){
+  /*$(window).resize(function(){
       var w = $(window).width(); // largura do viewport
-      if (w < 500) {
+      if (w < 768) {
         $('.nav-toggle').show();
         $('.menu').hide();
       } else {
         $('.nav-toggle').hide();
         $('.menu').show();
       }
-    });
+    });*/
 
 });
