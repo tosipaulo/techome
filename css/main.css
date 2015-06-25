@@ -8,8 +8,7 @@
 }
  
 html{
-  background-color: #fff;
-  background-image: url(../img/diagmonds-light.png);
+  
   font-family: "Raleway", "Open Sans",sans-serif;
 } 
 
@@ -208,15 +207,23 @@ embed {
   }
 
   .pageHome {
-    min-height: 100%;
+    background-attachment: fixed;
+    height: 400px;
   }
 
   .video {
-
+    position: relative;
+    top: 90px;
     float: right;
+    border: 3px solid #fff;
+    --webkit-box-shadow: 0px 2px 7px 0px rgba(50, 50, 50, 0.55);
+    -moz-box-shadow:    0px 2px 7px 0px rgba(50, 50, 50, 0.55);
+    box-shadow:         0px 2px 7px 0px rgba(50, 50, 50, 0.55);
   }
 
   .apresentacao {
+    position: relative;
+    top: 90px;
     float: left;
   }
 

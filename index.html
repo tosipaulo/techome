@@ -4,9 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Techome | Assistência Técnica Especializada</title>
-	<meta name="description" content="fotografia de casamento, studio de fotografia, fotográfo, fotografia profissional, site de fotografia, book fotográfico, fotografos de casamentos, fotografia infantil, ensaios fotograficos, fotografo freelancer, fotografo em São Paulo">
+	<meta name="description" content="Techome  Assistência Técnica Especializada">
 	<meta property="og:title" content="Techome | Assistência Técnica Especializada">
-	<meta property="og:description" content="fotografia de casamento, studio de fotografia, fotográfo, fotografia profissional, site de fotografia, book fotográfico, fotografos de casamentos, fotografia infantil, ensaios fotograficos, fotografo freelancer, fotografo em São Paulo">
+	<meta property="og:description" content="Techome  Assistência Técnica Especializada">
 	<meta property="og:url" content="http://www.techome.net.br">
 	<meta property="og:image" content="http://www.techome.net.br/avatar.jpg">
 	<meta property="og:type" content="website">
@@ -33,10 +33,10 @@
 			<span class='nav-toggle'>Menu <i class='fa fa-bars'></i></span>
 			<nav class="menu">
 				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Sobre</a></li>
-					<li><a href="#">Serviços</a></li>
-					<li><a href="#">Contato</a></li>
+					<li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+					<li><a href="#"><i class="fa fa-users"></i> Sobre</a></li>
+					<li><a href="#"><i class="fa fa-cogs"></i> Serviços</a></li>
+					<li><a href="#"><i class="fa fa-phone"></i> Contato</a></li>
 				</ul>
 			</nav>		
 		</div>		
@@ -47,7 +47,7 @@
 		<!-- PageHome -->
 		<article class="pageHome clearfix" id="pageHome">
 			<div class="container">
-				<video poster="video/play.png" class="video" id="video" onclick="playPause()">
+				<video id="video" class="video" autoplay poster="video/play.png"  >
 					<source src="video/video.mp4" type="video/mp4" >
 					<source src="video/video.webm" type="video/webm">
 					<source src="video/video.flv" type="video/flv" >
@@ -75,14 +75,49 @@
 	<!-- include main -->
 	<script src="js/main.js"></script>
 	<script> 
-		var myVideo = document.getElementById("video"); 
+		var myVideo = document.getElementById("video");
+		var video = $("#video");
+		video.get(0).addEventListener ('ended', function () {		
+			
+			//video.get(0).src = video.currentSrc;
+			//location.reload(false);
+			//video.attr('autoplay', false);
+			//video.get(0).poster="video/play.png";
 
-		function playPause() { 
+		});
+
+
+		video.on('click', function(){
+
+			video.get(0).paused ? video.get(0).play() : $(this).get(0).pause();
+
+		});
+
+			//video.bind ('ended', function () {
+				//video.autoplay = false;
+    			//video.load()
+				//location.reload(false);   
+
+	//$(this).get(0).currentTime=0;
+	//$(this).get(0).poster="video/play.png";
+//});
+
+		/*function playPause() { 
 		    if (myVideo.paused) 
 		        myVideo.play(); 
 		    else 
 		        myVideo.pause(); 
 		} 
+
+$(this).get(0).addEventListener ('ended', function () {
+				$(this).get(0).currentTime=0;	
+
+	//$(this).get(0).currentTime=0;
+	//$(this).get(0).poster="video/play.png";
+})
+
+
+		*/
 
 </script> 
 </body>
