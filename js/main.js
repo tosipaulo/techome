@@ -1,5 +1,22 @@
 $(document).ready(function() {
 
+  /**** Ativando fixed Menu ****/
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 20) {
+        $('.header-suporte').css({"display": "none"});
+        $('#header').css({"position": "fixed"});
+        console.log($(this).scrollTop());
+    } else {
+        $('.header-suporte').css({"display": "block"});
+        $('#header').css({"position": "absolute"});
+        console.log($(this).scrollTop());
+    }
+
+  }); 
+      
+
+
 	var $ppc = $('.progress-pie-chart'),
 
     percent = parseInt($ppc.data('percent')),

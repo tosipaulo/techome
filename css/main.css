@@ -90,8 +90,20 @@ embed {
 
 /*********** Header ***********/
 
+.header-suporte {
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+  background: #B2CF3F;
+  color: #fff;
+}
+
+.header-suporte a {
+  color: #fff;
+}
+
 .header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 100px;
   padding: 10px;
@@ -143,12 +155,22 @@ embed {
   font-size: 1.9em;
 }
 
-/*********** Video ***********/
+/*********** Slide ***********/
 
 .section {
   position: relative;
   top: 100px;
 }
+
+.slide {
+  background-color: #f1f1f1;
+  background-image: url(../img/diagmonds-light.png);
+}
+
+.box-slide {
+  float: left;
+}
+
 
 .pageHome {
   color: #fff;
@@ -157,9 +179,33 @@ embed {
   padding-bottom: 15px;
 }
 
+/*********** Scroll ***********/
 
+.scroll i {
+  margin:25px;
+  font-size: 3em;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+}
+
+/*********** Sobre ***********/
+.sobre {
+  font-size: 1.9em;
+}
 @media (min-width: 445px) and (orientation:landscape) {
+  .header {
+    height: 70px;
+  }
 
+  .nav-toggle {
+    margin-top: 4px;
+  }
+
+  .menu, .section {
+    top: 75px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -168,9 +214,18 @@ embed {
 }
 
 @media (min-width: 1024px) {
+
+  .header {
+    height: 100px;
+  }
+
+  .logo {
+    max-width: 100%;
+  }
+
   .nav-toggle {
     display: none;
-} 
+  } 
 
   .menu {
     display: block;
@@ -206,8 +261,16 @@ embed {
     margin: 0 auto;
   }
 
+  .section {
+    top: 100px;
+  }
+
+  .slide {
+    height: 400px;
+  }
+
   .pageHome {
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     height: 400px;
   }
 
