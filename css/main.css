@@ -13,6 +13,7 @@ html{
 } 
 
 body {
+    width: 100%;
     font-size: 62.5%;
     text-align: center;
 }
@@ -97,12 +98,14 @@ embed {
   flex-direction:column;
   align-items:center;
   justify-content:space-between; /*space-between ou space-around*/
+  flex-wrap: wrap;
 }
 
-.box-item {
+.box-item, .box-servico {
   width: 100%;
   padding: 30px;
 }
+
 /*********** Header ***********/
 
 .header-suporte {
@@ -299,6 +302,15 @@ embed {
 
   .box-item {
     width: 33%;
+  }
+
+  .box-servico {
+    width: 50%;
+    text-align: left;
+  }
+
+  .box-servico > p > strong {
+    text-decoration: underline;
   }
 
   .section {
