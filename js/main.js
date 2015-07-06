@@ -1,19 +1,37 @@
 $(document).ready(function() {
 
   /**** Ativando fixed Menu ****/
-
   $(window).scroll(function () {
     if ($(this).scrollTop() > 20) {
         $('.header-suporte').css({"display": "none"});
         $('#header').css({"position": "fixed"});
-        console.log($(this).scrollTop());
     } else {
         $('.header-suporte').css({"display": "block"});
         $('#header').css({"position": "absolute"});
-        console.log($(this).scrollTop());
     }
 
   }); 
+
+
+  /**** Scroll one page ****/
+  $(".menu a").click(function (event) {
+    event.preventDefault();   
+    /*var destino = 0;
+    if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
+        destino = $(document).height() - $(window).height();
+        $('.section').css({"top": "100px"});
+    } else {
+        destino = $(this.hash).offset().top;
+    }*/
+ 
+    $('html,body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top-100 
+    }, 800, 'swing');
+  });
+
+
+
+
       
 
 

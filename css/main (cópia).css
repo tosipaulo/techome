@@ -1,4 +1,4 @@
-*, *:before, *:after { 
+*, *:before, *:after {
    -webkit-box-sizing: border-box;
    -moz-box-sizing: border-box;
    box-sizing: border-box;
@@ -8,7 +8,7 @@
 }
  
 html{
-  overflow-x:hidden;
+  
   font-family: "Raleway", "Open Sans",sans-serif;
 } 
 
@@ -48,18 +48,12 @@ embed {
    max-width: 100%;
 }
 
-.title {
-  color: #B2CF3F;
-  margin-bottom: 50px; 
+.font-title {
+  font-size: 3.9em; /*39px*/
 }
 
-.title:before {
-  content: " ";
-
-}
-
-.title:after {
-  content: " ";
+.font-subTitle {
+  font-size: 1.8em; /*18px*/
 }
 
 .btn {
@@ -88,21 +82,12 @@ embed {
   border-color: #4cae4c;
 }
 
+
+
 .container {
   width: 100%;
 }
 
-.box-container {
-  display: flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:space-between; /*space-between ou space-around*/
-}
-
-.box-item {
-  width: 100%;
-  padding: 30px;
-}
 /*********** Header ***********/
 
 .header-suporte {
@@ -172,10 +157,9 @@ embed {
 
 /*********** Slide ***********/
 
-.home-slide {
+.section {
   position: relative;
   top: 100px;
-  margin-bottom: 80px;
 }
 
 .slide {
@@ -183,47 +167,33 @@ embed {
   background-image: url(../img/diagmonds-light.png);
 }
 
+.box-slide {
+  float: left;
+}
+
+
+.pageHome {
+  color: #fff;
+  background-color: #6ACF6A;
+  background-image: url(../img/diagmonds-light.png);
+  padding-bottom: 15px;
+}
+
 /*********** Scroll ***********/
 
 .scroll i {
-  margin:60px 45px 45px 45px;
-  font-size: 3em; 
+  margin:25px;
+  font-size: 3em;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
 }
-
 
 /*********** Sobre ***********/
-
-.sobre-nos, .servicos{
+.sobre {
   font-size: 1.9em;
-  padding: 10px;
 }
-
-.box-item:nth-child(4){
-  margin: 0 auto;
-}
-
-/*********** Servicos ***********/
-
-.servicos {
-  background-color: #B2CF3F;
-  background-image: url(../img/shattered-dark.png);
-  /*background-attachment: fixed;*/
-}
-
-.servicos p, .servicos h1 {
-  color: #fff;
-}
-
-/*********** Contato ***********/
-
-.contato {
-  font-size: 1.9em;
-  margin-bottom: 60px;
-}
-
-
-
-
 @media (min-width: 445px) and (orientation:landscape) {
   .header {
     height: 70px;
@@ -239,7 +209,6 @@ embed {
 }
 
 @media (min-width: 768px) {
-
 
   
 }
@@ -290,15 +259,6 @@ embed {
   .container {
     width: 980px;
     margin: 0 auto;
-  }
-
-  .box-container {
-    flex-direction:row;
-    flex-wrap:  wrap;
-}
-
-  .box-item {
-    width: 33%;
   }
 
   .section {
